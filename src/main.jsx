@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import { BrowserRouter, Route, Routes } from 'react-router'
+import { BrowserRouter, NavLink, Route, Routes } from 'react-router'
 import About from './About.jsx'
 import Settings from './Settings.jsx'
 import MainLayout from './MainLayout.jsx'
@@ -30,6 +30,7 @@ createRoot(document.getElementById('root')).render(
           <Route path='user/:userId/edit?' component={<Settings />} />
         </Route>
 
+        <NavLink />
       </Routes>
     </BrowserRouter>
   </StrictMode>

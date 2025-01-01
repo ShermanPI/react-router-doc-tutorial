@@ -1,21 +1,13 @@
-import { createContext, useEffect, useState } from 'react'
-import recipesData from '../mocks/recipes.json' // Adjust the path as needed
+import { createContext } from 'react'
+import { useProducts } from '../hooks/useProducts'
 
 export const recipesContext = createContext()
 
 export const RecipesContextProvider = ({ children }) => {
-  const [recipes, setRecipes] = useState([])
-
-  const loadRecipes = async () => {
-    setRecipes(recipesData)
-  }
-
-  useEffect(() => {
-    loadRecipes()
-  }, [])
+  const { filterRecipes, recipes } = useProducts()
 
   return (
-    <recipesContext.Provider value={{ recipes }}>
+    <recipesContext.Provider value={{ recipes, filterRecipes }}>
       {children}
     </recipesContext.Provider>
   )

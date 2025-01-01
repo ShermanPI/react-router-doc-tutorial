@@ -1,67 +1,69 @@
-# Recipe Explorer
+# Recipe Explorer Checklist
 
 ## 🌟 **Objective**
-Create a web application that allows users to explore, filter, and view detailed recipes. This project will leverage **React Router v7** features for navigation, dynamic routes, and nested layouts.
+- [x] Create a web application to explore, filter, and view detailed recipes.
+- [x] Leverage **React Router v7** features for navigation, dynamic routes, and nested layouts.
 
 ---
 
 ## ✨ **Features**
 
 ### 1. **Home Page**
-- A landing page introducing the app and featuring popular recipes.
-- Includes:
-  - A "Search Recipes" bar.
-  - A "Browse by Category" section.
+- [x] Design a landing page introducing the app.
+- [x] Feature popular recipes.
+- [x] Include:
+  - [x] A "Search Recipes" bar.
+  - [x] A "Browse by Category" section.
 
 ---
 
 ### 2. **Recipe Categories**
-- A page displaying different categories (e.g., Appetizers, Main Courses, Desserts).
-- Each category links to a list of recipes.
+- [ ] Create a page displaying different categories (e.g., Appetizers, Main Courses, Desserts).
+- [ ] Link each category to a list of recipes.
 
 ---
 
 ### 3. **Recipe Details Page**
-- A dynamic route: `/recipe/:id`.
-- Displays:
-  - Recipe details (e.g., ingredients, steps, and an image).
-  - Fetches data based on the `id` parameter.
+- [ ] Implement a dynamic route: `/recipe/:id`.
+- [ ] Display:
+  - [ ] Recipe details (e.g., ingredients, steps, and an image).
+  - [ ] Fetch data based on the `id` parameter.
 
 ---
 
 ### 4. **Search Results Page**
-- A route: `/search`.
-- Lists recipes based on user input.
-- Uses URL query parameters for search terms (e.g., `/search?query=pasta`).
+- [ ] Create a route: `/search`.
+- [ ] List recipes based on user input.
+- [ ] Use URL query parameters for search terms (e.g., `/search?query=pasta`).
 
 ---
 
 ### 5. **About Page**
-- A static page providing information about the app.
+- [ ] Design a static page providing information about the app.
 
 ---
 
 ### 6. **404 Page**
-- A custom "Page Not Found" page for undefined routes.
+- [ ] Build a custom "Page Not Found" page for undefined routes.
 
 ---
 
 ### 7. **Nested Layouts**
-- Shared **header** and **footer** across pages using nested routes.
-- Includes sub-navigation for categories within the Recipe Categories page.
+- [ ] Add shared **header** and **footer** across pages using nested routes.
+- [ ] Include sub-navigation for categories within the Recipe Categories page.
 
 ---
 
 ## 🎯 **Learning Points**
-- **Dynamic Routing:** Use `useParams` for dynamic recipe details.
-- **Nested Routes:** Create layouts with `Outlet` for shared UI components.
-- **Query Parameters:** Use `useSearchParams` for search functionality.
-- **Programmatic Navigation:** Use `useNavigate` for redirects and navigation.
-- **Lazy Loading:** Implement `React.lazy` to load pages dynamically for better performance.
+- [ ] Use `useParams` for dynamic recipe details.
+- [ ] Create layouts with `Outlet` for shared UI components.
+- [ ] Use `useSearchParams` for search functionality.
+- [ ] Use `useNavigate` for redirects and navigation.
+- [ ] Implement `React.lazy` to load pages dynamically for better performance.
 
 ---
 
 ## 🌟 **Bonus Features**
-- Add user authentication (e.g., login to save favorite recipes).
-- Include a **dark mode toggle**.
-- Integrate animations using **Framer Motion** for route transitions.
+- [ ] Add user authentication (e.g., login to save favorite recipes).
+- [ ] Include a **dark mode toggle**.
+- [ ] Integrate animations using **Framer Motion** for route transitions.

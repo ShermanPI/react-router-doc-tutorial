@@ -1,0 +1,183 @@
+[
+    {
+      "id": 1,
+      "name": "Spaghetti Carbonara",
+      "category": "Italian",
+      "price": 12.99,
+      "description": "Classic Italian pasta with creamy sauce and pancetta.",
+      "ingredients": ["Spaghetti", "Eggs", "Pancetta", "Parmesan", "Black pepper"],
+      "image": "url_of_spaghetti_carbonara_image"
+    },
+    {
+      "id": 2,
+      "name": "Chicken Tikka Masala",
+      "category": "Indian",
+      "price": 14.99,
+      "description": "Spicy chicken cooked in a creamy tomato sauce.",
+      "ingredients": ["Chicken", "Yogurt", "Tomatoes", "Onion", "Spices"],
+      "image": "url_of_chicken_tikka_masala_image"
+    },
+    {
+      "id": 3,
+      "name": "Beef Burger",
+      "category": "American",
+      "price": 9.99,
+      "description": "Juicy beef patty with lettuce, cheese, and pickles.",
+      "ingredients": ["Beef patty", "Bun", "Lettuce", "Cheese", "Pickles"],
+      "image": "url_of_beef_burger_image"
+    },
+    {
+      "id": 4,
+      "name": "Sushi Rolls",
+      "category": "Japanese",
+      "price": 18.99,
+      "description": "Fresh sushi with fish, rice, and seaweed.",
+      "ingredients": ["Sushi rice", "Seaweed", "Salmon", "Cucumber", "Avocado"],
+      "image": "url_of_sushi_rolls_image"
+    },
+    {
+      "id": 5,
+      "name": "Vegetable Stir-fry",
+      "category": "Asian",
+      "price": 11.99,
+      "description": "Stir-fried vegetables with soy sauce and garlic.",
+      "ingredients": ["Carrot", "Broccoli", "Bell pepper", "Soy sauce", "Garlic"],
+      "image": "url_of_vegetable_stir_fry_image"
+    },
+    {
+      "id": 6,
+      "name": "Pancakes",
+      "category": "Breakfast",
+      "price": 7.99,
+      "description": "Fluffy pancakes served with syrup and butter.",
+      "ingredients": ["Flour", "Eggs", "Milk", "Butter", "Syrup"],
+      "image": "url_of_pancakes_image"
+    },
+    {
+      "id": 7,
+      "name": "Guacamole",
+      "category": "Mexican",
+      "price": 5.99,
+      "description": "Mashed avocado with lime, cilantro, and tomatoes.",
+      "ingredients": ["Avocado", "Lime", "Cilantro", "Tomato", "Onion"],
+      "image": "url_of_guacamole_image"
+    },
+    {
+      "id": 8,
+      "name": "Caesar Salad",
+      "category": "Salad",
+      "price": 8.99,
+      "description": "Crispy lettuce with Caesar dressing, croutons, and Parmesan.",
+      "ingredients": ["Romaine lettuce", "Caesar dressing", "Croutons", "Parmesan"],
+      "image": "url_of_caesar_salad_image"
+    },
+    {
+      "id": 9,
+      "name": "Fish Tacos",
+      "category": "Mexican",
+      "price": 13.99,
+      "description": "Grilled fish tacos with salsa, guacamole, and cabbage.",
+      "ingredients": ["Fish", "Taco shells", "Cabbage", "Salsa", "Guacamole"],
+      "image": "url_of_fish_tacos_image"
+    },
+    {
+      "id": 10,
+      "name": "Margherita Pizza",
+      "category": "Italian",
+      "price": 15.99,
+      "description": "Thin crust pizza with tomato, mozzarella, and fresh basil.",
+      "ingredients": ["Pizza dough", "Tomato sauce", "Mozzarella", "Basil"],
+      "image": "url_of_margherita_pizza_image"
+    },
+    {
+      "id": 11,
+      "name": "Pad Thai",
+      "category": "Thai",
+      "price": 14.49,
+      "description": "Stir-fried noodles with peanuts, tofu, and lime.",
+      "ingredients": ["Rice noodles", "Tofu", "Peanuts", "Eggs", "Lime"],
+      "image": "url_of_pad_thai_image"
+    },
+    {
+      "id": 12,
+      "name": "Tom Yum Soup",
+      "category": "Thai",
+      "price": 9.99,
+      "description": "Spicy and sour soup with shrimp, lemongrass, and mushrooms.",
+      "ingredients": ["Shrimp", "Lemongrass", "Mushrooms", "Chili", "Fish sauce"],
+      "image": "url_of_tom_yum_soup_image"
+    },
+    {
+      "id": 13,
+      "name": "Falafel",
+      "category": "Middle Eastern",
+      "price": 10.99,
+      "description": "Crispy chickpea balls served with tahini sauce.",
+      "ingredients": ["Chickpeas", "Garlic", "Onion", "Cumin", "Tahini"],
+      "image": "url_of_falafel_image"
+    },
+    {
+      "id": 14,
+      "name": "Lasagna",
+      "category": "Italian",
+      "price": 16.99,
+      "description": "Layered pasta with meat sauce, béchamel, and cheese.",
+      "ingredients": ["Lasagna noodles", "Ground beef", "Ricotta cheese", "Tomato sauce", "Béchamel sauce"],
+      "image": "url_of_lasagna_image"
+    },
+    {
+      "id": 15,
+      "name": "Shakshuka",
+      "category": "Middle Eastern",
+      "price": 12.49,
+      "description": "Poached eggs in spicy tomato sauce with peppers and onions.",
+      "ingredients": ["Eggs", "Tomatoes", "Onions", "Peppers", "Spices"],
+      "image": "url_of_shakshuka_image"
+    },
+    {
+      "id": 16,
+      "name": "Chicken Alfredo",
+      "category": "Italian",
+      "price": 14.99,
+      "description": "Creamy pasta with grilled chicken and Parmesan cheese.",
+      "ingredients": ["Fettuccine", "Chicken", "Heavy cream", "Parmesan", "Garlic"],
+      "image": "url_of_chicken_alfredo_image"
+    },
+    {
+      "id": 17,
+      "name": "Banh Mi",
+      "category": "Vietnamese",
+      "price": 11.99,
+      "description": "Vietnamese sandwich with pork, pickled vegetables, and cilantro.",
+      "ingredients": ["Baguette", "Pork", "Pickled vegetables", "Cilantro", "Mayonnaise"],
+      "image": "url_of_banh_mi_image"
+    },
+    {
+      "id": 18,
+      "name": "Beef Stroganoff",
+      "category": "Russian",
+      "price": 17.99,
+      "description": "Tender beef in creamy mushroom sauce, served with noodles.",
+      "ingredients": ["Beef", "Mushrooms", "Onion", "Sour cream", "Egg noodles"],
+      "image": "url_of_beef_stroganoff_image"
+    },
+    {
+      "id": 19,
+      "name": "Eggplant Parmesan",
+      "category": "Italian",
+      "price": 13.49,
+      "description": "Breaded eggplant layered with marinara sauce and melted cheese.",
+      "ingredients": ["Eggplant", "Marinara sauce", "Mozzarella", "Parmesan", "Breadcrumbs"],
+      "image": "url_of_eggplant_parmesan_image"
+    },
+    {
+      "id": 20,
+      "name": "Poke Bowl",
+      "category": "Hawaiian",
+      "price": 14.99,
+      "description": "Rice bowl topped with fresh fish, avocado, and pickled vegetables.",
+      "ingredients": ["Rice", "Tuna", "Avocado", "Cucumber", "Soy sauce"],
+      "image": "url_of_poke_bowl_image"
+    }
+  ]
+  

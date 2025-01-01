@@ -1,11 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import { BrowserRouter, NavLink, Route, Routes } from 'react-router'
-import About from './About.jsx'
-import Settings from './Settings.jsx'
-import MainLayout from './MainLayout.jsx'
-import App from './App.jsx'
+import { BrowserRouter, Route, Routes } from 'react-router'
+import { MainLayout } from './MainLayout.jsx'
+import { Recipes } from './recipes/recipes.jsx'
+import { RecipesContextProvider } from './contexts/recipesContext.jsx'
 
 // NOTEs 📚📚📚📚
 // <BrowserRouter>: It is the high-level component that configures the navigation history and provides the routing context to the entire application. It should wrap the rest of your application.
@@ -18,21 +17,17 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
+    <RecipesContextProvider>
+      <BrowserRouter>
+        <Routes>
 
-        <Route path='/' element={<MainLayout />}>
-          <Route index element={<App />} />
+          <Route path='/' element={<MainLayout />}>
+            <Route index element={<Recipes />} />
+          </Route>
 
-          <Route path='about' element={<About />} />
-          <Route path='settings' element={<Settings />} />
-          <Route path='profile' element={<Settings />} />
-          <Route path='user/:userId/edit?' component={<Settings />} />
-        </Route>
-
-        <NavLink />
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </RecipesContextProvider>
   </StrictMode>
 )
 

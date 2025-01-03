@@ -1,20 +1,18 @@
 import { useContext } from 'react'
-import { useSearchParams } from 'react-router'
 import { recipesContext } from '../contexts/recipesContext'
+import './recipes.css'
 
 export function Recipes () {
-  const [searchParams] = useSearchParams()
-  const recipes = useContext(recipesContext)
-
-  console.log(recipes, '🥳🥳🥳')
+  const { filteredRecipes } = useContext(recipesContext)
 
   return (
-    <>
-      <div className='recipe-card'>
-        {searchParams.get('category')}
-        <img src='https://picsum.photos/200/300' alt='recipe image' />
-        Mac And Cheese
-      </div>
-    </>
+    <section className='recipes-container'>
+      {filteredRecipes?.map((recipe, index) =>
+        <div className='recipe-card' key={index}>
+          <img src='https://picsum.photos/200/300' alt='recipe image' />
+          {recipe.name}
+        </div>)}
+
+    </section>
   )
 }

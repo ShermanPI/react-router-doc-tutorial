@@ -4,10 +4,10 @@ import { useProducts } from '../hooks/useProducts'
 export const recipesContext = createContext()
 
 export const RecipesContextProvider = ({ children }) => {
-  const { filterRecipes, recipes } = useProducts()
+  const { filteredRecipes, categories } = useProducts()
 
   return (
-    <recipesContext.Provider value={{ recipes, filterRecipes }}>
+    <recipesContext.Provider value={{ filteredRecipes, categories }}>
       {children}
     </recipesContext.Provider>
   )

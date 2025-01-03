@@ -1,27 +1,28 @@
 import { useEffect, useState } from 'react'
-import recipesData from '../mocks/recipes.json' //
+import recipesData from '../mocks/recipes.json'
+import { useSearchParams } from 'react-router'
 
 export const useProducts = () => {
   const [recipes, setRecipes] = useState([])
+  const [categories, setCategories] = useState([])
+  const [searchParams] = useSearchParams()
 
-  const filterRecipes = ({ category = 'all' }) => {
-    const filteredRecipes = recipes.filter((recipe) => {
-      const filterCategory = category.toLocaleLowerCase()
-      const recipeCategory = recipe.category.toLocaleLowerCase()
+  const searchParamCategory = searchParams.get('category')?.toLocaleLowerCase() || ''
 
-      return recipeCategory === filterCategory || category === 'all' || !filterCategory
-    })
+  const filteredRecipes = recipes.filter((recipe) => {
+    const recipeCategory = recipe.category.toLocaleLowerCase()
 
-    setRecipes(filteredRecipes)
-  }
-
-  const loadRecipes = async () => {
-    setRecipes(recipesData)
-  }
+    return recipeCategory === searchParamCategory || searchParams.category === 'all' || !searchParamCategory
+  })
 
   useEffect(() => {
-    loadRecipes()
+    const categories = recipesData.map(recipe => recipe.category)
+    setCategories([...new Set(categories)]);
+
+    (async () => {
+      setRecipes(recipesData)
+    })()
   }, [])
 
-  return { filterRecipes, recipes }
+  return { filteredRecipes, categories }
 }

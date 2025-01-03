@@ -1,0 +1,12 @@
+.recipes-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px,  1fr));
+}
+
+.recipe-card{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    gap: 1rem;
+}

@@ -17,20 +17,19 @@ import { RecipesContextProvider } from './contexts/recipesContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RecipesContextProvider>
-      <BrowserRouter>
-        <Routes>
+    <BrowserRouter>
+      <RecipesContextProvider>
 
+        <Routes>
           <Route path='/' element={<MainLayout />}>
             <Route index element={<Recipes />} />
           </Route>
-
         </Routes>
-      </BrowserRouter>
-    </RecipesContextProvider>
+
+      </RecipesContextProvider>
+    </BrowserRouter>
   </StrictMode>
 )
-
 // Resumen: ¿Por qué React Router usa <Outlet />?
 // 1 - Composición: Permite la creación de rutas jerárquicas y modulares, donde los componentes padres gestionan el espacio de las rutas hijas.
 // 2 - Reutilización de Layouts: Hace posible tener una estructura común (encabezado, pie, etc.) y solo cargar las vistas correspondientes en el <Outlet />.

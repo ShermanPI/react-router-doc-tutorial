@@ -1,10 +1,3 @@
-.recipe-card{
-    width: 200px;
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid black;
-    gap: 1rem;
-}
 
 img{
     width: 100%;
@@ -34,4 +27,15 @@ img{
 
 .categories-section button.active{
     background-color: red;
+}
+
+main{
+    padding-inline: 4rem;
+    padding-block: 2rem
+}
+
+.categories-section{
+    display: flex;
+    width: 100;
+    flex-wrap: wrap;
 }

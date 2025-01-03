@@ -18,8 +18,8 @@
 ---
 
 ### 2. **Recipe Categories**
-- [ ] Create a page displaying different categories (e.g., Appetizers, Main Courses, Desserts).
-- [ ] Link each category to a list of recipes.
+- [x] Create a page displaying different categories (e.g., Appetizers, Main Courses, Desserts).
+- [x] Link each category to a list of recipes.
 
 ---
 

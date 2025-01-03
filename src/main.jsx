@@ -3,7 +3,8 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import { MainLayout } from './MainLayout.jsx'
-import { Recipes } from './recipes/recipes.jsx'
+import { RecipeInfo } from './components/recipeInfo/recipeInfo.jsx'
+import { Recipes } from './components/recipes/recipes.jsx'
 import { RecipesContextProvider } from './contexts/recipesContext.jsx'
 
 // NOTEs 📚📚📚📚
@@ -24,6 +25,8 @@ createRoot(document.getElementById('root')).render(
           <Route path='/' element={<MainLayout />}>
             <Route index element={<Recipes />} />
           </Route>
+
+          <Route path='/recipe/:id' element={<RecipeInfo />} />
         </Routes>
 
       </RecipesContextProvider>

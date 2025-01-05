@@ -12,17 +12,17 @@ export const useProducts = () => {
   const filteredRecipes = recipes.filter((recipe) => {
     const recipeCategory = recipe.category.toLocaleLowerCase()
 
-    return recipeCategory === searchParamCategory || searchParams.category === 'all' || !searchParamCategory
+    return recipeCategory === searchParamCategory || searchParamCategory === 'all' || !searchParamCategory
   })
 
   useEffect(() => {
     const categories = recipesData.map(recipe => recipe.category)
-    setCategories([...new Set(categories)]);
+    setCategories(['All', ...new Set(categories)]);
 
     (async () => {
       setRecipes(recipesData)
     })()
   }, [])
 
-  return { filteredRecipes, categories }
+  return { filteredRecipes, categories, recipes }
 }

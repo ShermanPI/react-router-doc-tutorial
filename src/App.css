@@ -8,12 +8,6 @@ img{
     gap: 1rem;
 }
 
-#search-input{
-    margin-bottom: 1rem;
-    width: 400px;
-    height: 40px;
-}
-
 .categories-section{
     display: flex;
     gap: 1rem;
@@ -38,4 +32,30 @@ main{
     display: flex;
     width: 100;
     flex-wrap: wrap;
+}
+
+.search-container{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    gap: 0.5rem;
+}
+
+#search-input{
+    width: 400px;
+}
+
+.category-link{
+    height: 30px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding-inline: 1rem;
+    cursor: pointer;
+}
+
+.category-link-active{
+    background-color: green;
 }

@@ -24,10 +24,10 @@
 ---
 
 ### 3. **Recipe Details Page**
-- [ ] Implement a dynamic route: `/recipe/:id`.
-- [ ] Display:
-  - [ ] Recipe details (e.g., ingredients, steps, and an image).
-  - [ ] Fetch data based on the `id` parameter.
+- [x] Implement a dynamic route: `/recipe/:id`.
+- [x] Display:
+  - [x] Recipe details (e.g., ingredients, steps, and an image).
+  - [x] Fetch data based on the `id` parameter. (here i just used the .find method on the recipes to simulate it)
 
 ---
 

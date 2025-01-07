@@ -6,6 +6,7 @@ import { MainLayout } from './MainLayout.jsx'
 import { RecipeInfo } from './components/recipeInfo/recipeInfo.jsx'
 import { Recipes } from './components/recipes/recipes.jsx'
 import { RecipesContextProvider } from './contexts/recipesContext.jsx'
+import { SearchView } from './components/searchView/searchView.jsx'
 
 // NOTEs 📚📚📚📚
 // <BrowserRouter>: It is the high-level component that configures the navigation history and provides the routing context to the entire application. It should wrap the rest of your application.
@@ -24,9 +25,11 @@ createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path='/' element={<MainLayout />}>
             <Route index element={<Recipes />} />
+            <Route path='/search' element={<SearchView />} />
           </Route>
 
           <Route path='/recipe/:id' element={<RecipeInfo />} />
+
         </Routes>
 
       </RecipesContextProvider>

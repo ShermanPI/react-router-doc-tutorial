@@ -1,12 +1,14 @@
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useRef } from 'react'
 import './App.css'
 
-import { NavLink, Outlet, useSearchParams } from 'react-router'
+import { NavLink, Outlet, useNavigate, useSearchParams } from 'react-router'
 import { recipesContext } from './contexts/recipesContext'
 
 export function MainLayout () {
   const { categories } = useContext(recipesContext)
   const [searchParams] = useSearchParams()
+  const searchValueRef = useRef('')
+  const navigate = useNavigate()
 
   useEffect(() => {
     if (!searchParams.get('category')) {
@@ -17,13 +19,25 @@ export function MainLayout () {
   return (
     <main>
       <div className='search-container'>
-        <input type='text' name='search' id='search-input' placeholder='SEARCH A RECIPE' />
-        <button>SEARCH</button>
+        <input
+          onInput={(e) => {
+            searchValueRef.current = e.target.value
+          }}
+          type='text'
+          name='search'
+          id='search-input'
+          placeholder='SEARCH A RECIPE'
+        />
+        <button onClick={() => {
+          navigate(`/search?query=${searchValueRef.current}`)
+        }}
+        >SEARCH
+        </button>
       </div>
       <section className='categories-section'>
         {categories?.map((categoryName, index) =>
           <NavLink
-            key={index} to={`?category=${categoryName}`}
+            key={index} to={`/?category=${categoryName}`}
             className={() =>
               `${searchParams.get('category') === categoryName ? 'category-link-active' : ''} category-link`}
           >

@@ -1,0 +1,19 @@
+.ul-links{
+   list-style: none;
+   display: flex;
+   gap: 1rem;
+   width: 100%;
+   justify-content: end;
+}
+
+.nav-link-item{
+   list-style: none;
+   text-decoration: none;
+}
+
+.nav-link-item.active{
+    background-color: black;
+    color: white;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+}

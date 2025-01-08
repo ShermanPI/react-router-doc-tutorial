@@ -7,6 +7,7 @@ import { RecipeInfo } from './components/recipeInfo/recipeInfo.jsx'
 import { Recipes } from './components/recipes/recipes.jsx'
 import { RecipesContextProvider } from './contexts/recipesContext.jsx'
 import { SearchView } from './components/searchView/searchView.jsx'
+import { AboutView } from './components/aboutView/aboutView.jsx'
 
 // NOTEs 📚📚📚📚
 // <BrowserRouter>: It is the high-level component that configures the navigation history and provides the routing context to the entire application. It should wrap the rest of your application.
@@ -28,6 +29,7 @@ createRoot(document.getElementById('root')).render(
             <Route path='/search' element={<SearchView />} />
           </Route>
 
+          <Route path='/about' element={<AboutView />} />
           <Route path='/recipe/:id' element={<RecipeInfo />} />
 
         </Routes>

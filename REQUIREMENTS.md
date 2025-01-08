@@ -33,8 +33,8 @@
 
 ### 4. **Search Results Page**
 - [x] Create a route: `/search`.
-- [ ] List recipes based on user input.
-- [ ] Use URL query parameters for search terms (e.g., `/search?query=pasta`).
+- [x] List recipes based on user input.
+- [x] Use URL query parameters for search terms (e.g., `/search?query=pasta`).
 
 ---
 

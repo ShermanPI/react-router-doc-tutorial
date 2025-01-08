@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { recipesContext } from '../../contexts/recipesContext'
 import { useNavigate, useParams } from 'react-router'
 
-export const RecipeInfo = ({ children }) => {
+export const RecipeInfo = () => {
   const { recipes } = useContext(recipesContext)
   const { id: urlProductId } = useParams()
   const navigate = useNavigate()

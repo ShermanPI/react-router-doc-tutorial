@@ -8,11 +8,20 @@ export const useProducts = () => {
   const [searchParams] = useSearchParams()
 
   const searchParamCategory = searchParams.get('category')?.toLocaleLowerCase() || ''
+  const searchQueryParam = searchParams.get('query')?.toLocaleLowerCase() || ''
 
   const filteredRecipes = recipes.filter((recipe) => {
     const recipeCategory = recipe.category.toLocaleLowerCase()
+    const recipeName = recipe.name.toLocaleLowerCase()
 
-    return recipeCategory === searchParamCategory || searchParamCategory === 'all' || !searchParamCategory
+    return (
+      searchParamCategory
+        ? recipeCategory === searchParamCategory ||
+      searchParamCategory === 'all' ||
+       !searchParamCategory
+        : recipeName.includes(searchQueryParam)
+
+    )
   })
 
   useEffect(() => {

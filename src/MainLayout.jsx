@@ -18,7 +18,7 @@ export function MainLayout () {
 
   return (
     <main>
-      <div className='search-container'>
+      <form onSubmit={(e) => e.preventDefault()} className='search-container'>
         <input
           onInput={(e) => {
             searchValueRef.current = e.target.value
@@ -33,7 +33,7 @@ export function MainLayout () {
         }}
         >SEARCH
         </button>
-      </div>
+      </form>
       <section className='categories-section'>
         {categories?.map((categoryName, index) =>
           <NavLink

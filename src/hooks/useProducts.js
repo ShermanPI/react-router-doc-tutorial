@@ -20,7 +20,6 @@ export const useProducts = () => {
       searchParamCategory === 'all' ||
        !searchParamCategory
         : recipeName.includes(searchQueryParam)
-
     )
   })
 

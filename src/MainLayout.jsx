@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import './App.css'
 
 import { NavLink, Outlet, useNavigate, useSearchParams } from 'react-router'
@@ -7,29 +7,36 @@ import { recipesContext } from './contexts/recipesContext'
 export function MainLayout () {
   const { categories } = useContext(recipesContext)
   const [searchParams] = useSearchParams()
-  const searchValueRef = useRef('')
+  const [searchValue, setSearchValue] = useState(searchParams.get('query') || '')
   const navigate = useNavigate()
 
   useEffect(() => {
-    if (!searchParams.get('category')) {
+    if (!searchParams.get('category') && !searchParams.get('query')) {
       searchParams.set('category', 'All')
     }
   }, [])
+
+  useEffect(() => {
+    setSearchValue(searchParams.get('query') || '')
+  }, [searchParams.get('query')])
+
+  console.log('render')
 
   return (
     <main>
       <form onSubmit={(e) => e.preventDefault()} className='search-container'>
         <input
           onInput={(e) => {
-            searchValueRef.current = e.target.value
+            setSearchValue(e.target.value)
           }}
           type='text'
           name='search'
           id='search-input'
           placeholder='SEARCH A RECIPE'
+          value={searchValue}
         />
         <button onClick={() => {
-          navigate(`/search?query=${searchValueRef.current}`)
+          navigate(`/search?query=${searchValue}`)
         }}
         >SEARCH
         </button>

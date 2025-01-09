@@ -49,16 +49,16 @@
 ---
 
 ### 7. **Nested Layouts**
-- [ ] Add shared **header** and **footer** across pages using nested routes.
-- [ ] Include sub-navigation for categories within the Recipe Categories page.
+- [x] Add shared **header** and **footer** across pages using nested routes.
+- [x] Include sub-navigation for categories within the Recipe Categories page.
 
 ---
 
 ## 🎯 **Learning Points**
-- [ ] Use `useParams` for dynamic recipe details.
-- [ ] Create layouts with `Outlet` for shared UI components.
-- [ ] Use `useSearchParams` for search functionality.
-- [ ] Use `useNavigate` for redirects and navigation.
+- [x] Use `useParams` for dynamic recipe details.
+- [x] Create layouts with `Outlet` for shared UI components.
+- [x] Use `useSearchParams` for search functionality.
+- [x] Use `useNavigate` for redirects and navigation.
 - [ ] Implement `React.lazy` to load pages dynamically for better performance.
 
 ---

@@ -44,7 +44,7 @@
 ---
 
 ### 6. **404 Page**
-- [ ] Build a custom "Page Not Found" page for undefined routes.
+- [x] Build a custom "Page Not Found" page for undefined routes.
 
 ---
 

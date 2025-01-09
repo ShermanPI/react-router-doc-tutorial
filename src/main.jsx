@@ -9,6 +9,7 @@ import { RecipesContextProvider } from './contexts/recipesContext.jsx'
 import { SearchView } from './components/searchView/searchView.jsx'
 import { AboutPage } from './components/aboutView/aboutPage.jsx'
 import { ProductsFilterLayout } from './components/productsFilter/productsFilterLayout.jsx'
+import { PageNotFound } from './components/pageNotFound/PageNotFound.jsx'
 
 // NOTEs 📚📚📚📚
 // <BrowserRouter>: It is the high-level component that configures the navigation history and provides the routing context to the entire application. It should wrap the rest of your application.
@@ -25,6 +26,8 @@ createRoot(document.getElementById('root')).render(
       <RecipesContextProvider>
 
         <Routes>
+          <Route path='*' element={<PageNotFound />} />
+
           <Route path='/' element={<MainLayout />}>
             <Route element={<ProductsFilterLayout />}>
               <Route index element={<Recipes />} />
@@ -50,3 +53,11 @@ createRoot(document.getElementById('root')).render(
 
 // <Outlet> also helps in managing layouts where a portion of the page remains the same, such as headers or sidebars, \
 // while other parts change based on the route, while saving resources
+
+// The order in which React Router resolves routes:
+
+// 1 - Exact match of static routes (e.g., /about/team).
+// 2 - Routes with more static segments (e.g., /about/team takes priority over /about).
+// 3 - Dynamic routes with specific parameters (e.g., /about/:id).
+// 4 - More general dynamic routes (e.g., /user/:param1/:param2 has lower priority than a more specific route like /about/:id).
+// 5 - star routes (*) (user/*), used as a last resort to capture any non-matching route.

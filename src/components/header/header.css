@@ -9,6 +9,7 @@
 .nav-link-item{
    list-style: none;
    text-decoration: none;
+   color: black;
 }
 
 .nav-link-item.active{

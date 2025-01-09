@@ -39,7 +39,7 @@
 ---
 
 ### 5. **About Page**
-- [ ] Design a static page providing information about the app.
+- [x] Design a static page providing information about the app.
 
 ---
 

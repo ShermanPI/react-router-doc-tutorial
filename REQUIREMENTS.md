@@ -59,7 +59,7 @@
 - [x] Create layouts with `Outlet` for shared UI components.
 - [x] Use `useSearchParams` for search functionality.
 - [x] Use `useNavigate` for redirects and navigation.
-- [ ] Implement `React.lazy` to load pages dynamically for better performance.
+- [ ] Implement `React.lazy` to load pages dynamically for better performance. (https://youtube.com/shorts/yWa8FXDimbw?si=NN0MhjxqImh-JmbL)
 
 ---
 
